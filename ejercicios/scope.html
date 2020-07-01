@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Scope</title>
+</head>
+<body>
+    <a href="/ejercicios/">Go back</a>
+    <p><em>Abre la consola</em></p>
+
+    <!--Global scope-->
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery"></script>
+
+    <script>
+        //Global scope
+       /*  var message = 'Hello Platzi'
+        var $ = function(message){
+            console.log(`Say: ${message}`)
+        } */
+
+        //Function Scope
+        /*function printNumbers(){
+            var i
+            for( i = 0; i < 10; i ++){
+                function eventuallyPrintNumber(n){
+                    setTimeout(() => console.log(i), 100)
+                }
+               eventuallyPrintNumber(i)
+            } 
+        }
+
+        printNumbers()*/
+
+        //Block Scope
+        function printNumbers(){
+            for(let i = 0; i < 10; i ++){
+                setTimeout(() => console.log(i), 100)
+            } 
+        }
+
+        printNumbers()
+
+        // Module Scope
+        
+
+    </script>
+</body>
+</html>
