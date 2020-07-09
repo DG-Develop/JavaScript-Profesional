@@ -1,0 +1,15 @@
+{
+  "name": "@dgdevelop/mediaplayer",
+  "version": "1.0.0",
+  "description": "MediaPlayer",
+  "main": "lib/MediaPlayer.js",
+  "scripts": {
+    "build": "tsc src/**/*.ts src/plugins/*.ts src/plugins/**/*.ts --outDir lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Gómez Pacheco",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.9.6"
+  }
+}
