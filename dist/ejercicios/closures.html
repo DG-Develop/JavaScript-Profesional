@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Closures</title>
+</head>
+<body>
+    <a href="/ejercicios/">Go Back</a>
+    <p><em>Abre la consola</em></p>
+
+    <script>//IIFE 
+
+/*(function (){
+     let color = 'green'
+      function printColor(){
+         console.log(color)
+     }
+      printColor()
+ })()*/
+//Funciones que regresan funciones
+
+/*function makeColorPrinter(color){
+    const colorMessage = `The color is ${color}`
+    return () => {
+        console.log(colorMessage)
+    }
+}
+ const greenColorPrinter = makeColorPrinter("green")
+console.log(greenColorPrinter()) */
+//Variables privadas 
+
+/*const counter = {
+    count: 3,
+}
+ console.log(counter.count)*/
+function makeCounter(n) {
+  let count = n;
+  return {
+    increase: function () {
+      count += 1;
+    },
+    decrease: function () {
+      count -= 1;
+    },
+    getCount: function () {
+      return count;
+    }
+  };
+}
+
+const counter = makeCounter(100);
+counter.increase();
+console.log(`The count is ${counter.getCount()}`);
+counter.decrease();
+counter.decrease();
+counter.decrease();
+counter.decrease();
+counter.decrease();
+console.log(`The count is ${counter.getCount()}`);</script>
+</body>
+</html>
